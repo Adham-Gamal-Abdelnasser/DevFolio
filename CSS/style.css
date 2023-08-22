@@ -1,0 +1,366 @@
+/* ////////////////////////Standards//////////////////////// */
+:root {
+    /* colors */
+    --main-color: #007bff;
+    --base: #fff;
+    --layered-black: rgba(0,0,0,0.8);
+    --website-bg-body: #eee;
+}
+body {
+    /* overflow-x: hidden; */
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.doma {
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+  }
+  .doma a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .doma img {
+    width: 100%;
+  }
+  .popup {
+    z-index: 5;
+
+    background-color: white;
+      color: var(--most-common);
+      padding: 2px;
+      border-radius: 2px;
+      cursor: pointer;
+      position: fixed;
+      bottom: 55px;
+      right: 56.8px;
+      opacity: 0;
+      transition: 0.5s;
+  }
+  .popup:hover {
+    opacity: 1;
+  }
+/* ///////////////////Header Section//////////////////////// */
+header {
+    background: url("../images/intro-bg.jpg");
+    background-size: cover;
+    position: relative;
+}
+nav {
+    color: var(--base) ;
+    /* background-color: white; */
+}
+nav ul {
+    gap: 30px;
+} 
+nav a {
+    color: var(--base) !important;
+    position: relative;
+}
+.container-fluid {
+    gap: 40%;
+}
+nav ul li a::after {
+    content: "";
+    height: 2px;
+    width: 0;
+    background-color: var(--base);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.4s;
+}
+nav ul li:hover a::after {
+    width: 80%;
+}
+
+.hed-content h1 {
+    font-size: 4.5rem;
+}
+.hed-content p{position: relative;}
+.hed-content p::after {
+    content: " |";
+    font-size: 2.5rem;
+    animation: typing 11s linear infinite;
+    transform: translateX(-50% );
+}
+@keyframes typing {
+    0.7%{content: " |";}
+    1.4%{content: " C|";}
+    2.1%{content: " CE|";}
+    2.8%{content: " CEO|";}
+    3.5%{content: " CEO |";}
+    4.2%{content: " CEO D|";}
+    5.9%{content: " CEO De|";}
+    6.6%{content: " CEO Dev|";}
+    7.3%{content: " CEO DevF|";}
+    8%{content: " CEO DevFo|";}
+    8.7%{content: " CEO DevFol|";}
+    9.4%{content: " CEO DevFoli|";}
+    10.1%{content: " CEO DevFolio|";}
+    13.2%{content: " CEO DevFoli|";}
+    14.9%{content: " CEO DevFol|";}
+    15.6%{content: " CEO DevFo|";}
+    16.3%{content: " CEO DevF|";}
+    17%{content: " CEO Dev|";}
+    17.7%{content: " CEO De|";}
+    18.4%{content: " CEO D|";}
+    19.1%{content: " CEO |";}
+    20.8%{content: " CEO|";}
+    21.5%{content: " CE|0";}
+    22.2%{content: " C|";}
+    22.9%{content: " |";}
+    23.6%{content: " W|";}
+    24.3%{content: " We|";}
+    25%{content: " Web|";}
+    25.7%{content: " Web |";}
+    26.4%{content: " Web D|";}
+    27.1%{content: " Web De|";}
+    27.8%{content: " Web Dev|";}
+    28.5%{content: " Web Deve|";}
+    29.2%{content: " Web Devel|";}
+    30.9%{content: " Web Develo|";}
+    31.6%{content: " Web Develop|";}
+    32.3%{content: " Web Develope|";}
+    33%{content: " Web Developer|";}
+    37.5%{content: " Web Develope|";}
+    38.2%{content: " Web Develop|";}
+    38.9%{content: " Web Develo|";}
+    39.6%{content: " Web Devel|";}
+    40.3%{content: " Web Deve|";}
+    41%{content: " Web Dev|";}
+    41.7%{content: " Web De|";}
+    42.4%{content: " Web Des|";}
+    43.1%{content: " Web Desi|";}
+    43.8%{content: " Web Desig|";}
+    44.5%{content: " Web Design|";}
+    45.2%{content: " Web Designe|";}
+    45.9%{content: " Web Designer|";}
+    48%{content: " Web Designe|";}
+    48.7%{content: " Web Design|";}
+    49.4%{content: " Web Desig|";}
+    50.1%{content: " Web Desi|";}
+    50.8%{content: " Web Des|";}
+    51.5%{content: " Web De|";}
+    52.2%{content: " Web D|";}
+    52.9%{content: " Web |";}
+    53.6%{content: " Web|";}
+    54.3%{content: " We|";}
+    55%{content: " W|";}
+    55.7%{content: " |";}
+    56.4%{content: " F|";}
+    57.1%{content: " Fr|";}
+    57.8%{content: " Fro|";}
+    58.5%{content: " Fron|";}
+    59.2%{content: " Front|";}
+    59.9%{content: " Fronte|";}
+    60.6%{content: " Fronten|";}
+    61.3%{content: " Frontend|";}
+    62%{content: " Frontend |";}
+    62.7%{content: " Frontend D|";}
+    63.4%{content: " Frontend De|";}
+    64.1%{content: " Frontend Dev|";}
+    64.8%{content: " Frontend Deve|";}
+    65.5%{content: " Frontend Devel|";}
+    66.2%{content: " Frontend Develo|";}
+    66.9%{content: " Frontend Develop|";}
+    67.6%{content: " Frontend Develope|";}
+    68.3%{content: " Frontend Developer|";}
+    70.4%{content: " Frontend Develope|";}
+    71.1%{content: " Frontend Develop|";}
+    71.8%{content: " Frontend Develo|";}
+    72.5%{content: " Frontend Devel|";}
+    73.2%{content: " Frontend Deve|";}
+    73.9%{content: " Frontend Dev|";}
+    74.6%{content: " Frontend De|";}
+    75.3%{content: " Frontend D|";}
+    76%{content: " Frontend |";}
+    76.7%{content: " Frontend|";}
+    77.4%{content: " Fronten|";}
+    78.1%{content: " Fronte|";}
+    78.8%{content: " Front|";}
+    79.5%{content: " Fron|";}
+    80.2%{content: " Fro|";}
+    80.9%{content: " Fr|";}
+    81.6%{content: " F|";}
+    82.3%{content: " |";}
+    83%{content: " G|";}
+    83.7%{content: " Gr|";}
+    84.4%{content: " Gra|";}
+    85.1%{content: " Grap|";}
+    85.8%{content: " Graph|";}
+    86.5%{content: " Graphi|";}
+    87.2%{content: " Graphic|";}
+    87.9%{content: " Graphic |";}
+    88.6%{content: " Graphic D|";}
+    89.3%{content: " Graphic De|";}
+    90%{content: " Graphic Des|";}
+    90.7%{content: " Graphic Desi|";}
+    91.4%{content: " Graphic Desig|";}
+    92.1%{content: " Graphic Design|";}
+    92.8%{content: " Graphic Designe|";}
+    93.5%{content: " Graphic Designer|";}
+    95.6%{content: " Graphic Designe|";}
+    96.3%{content: " Graphic Design|";}
+    97%{content: " Graphic Desig|";}
+    97.5%{content: " Graphic Desi|";}
+    97.9%{content: " Graphic Des|";}
+    98.2%{content: " Graphic De|";}
+    98.6%{content: " Graphic D|";}
+    99%{content: " Graphic |";}
+    99.1%{content: " Graphic|";}
+    99.3%{content: " Graphi|";}
+    99.5%{content: " Graph|";}
+    99.6%{content: " Grap|";}
+    99.7%{content: " Gra|";}
+    99.8%{content: " Gr|";}
+    99.9%{content: " G|";}
+    100%{content: " |";}
+}
+/* ==============About Section======================= */
+#about , #service {
+    background-color: var(--website-bg-body);
+}
+.title-left::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 25%;
+    height: 3px;
+    background-color: var(--main-color);
+}
+/* ===========Service Section====================== */
+.ser-title h2 {
+    font-size: 4rem;
+}
+.ser-title::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 45%;
+    height: 5px;
+    width: 10%;
+    background-color: var(--main-color);
+}
+.ser-contain .row {
+    row-gap: 1rem;
+}
+.ser-contain .row  .card span i {
+    transition: all 0.5s;
+}
+.ser-contain .row  .card span:hover i {
+    background-color: var(--main-color);
+    border-color: rgba(133, 187, 245, 0.836) !important;
+    color: var(--base);
+}
+/* ===========Skills Section====================== */
+#skills {
+    background-image: url("../images/image_13.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: scroll;
+    height: 50vh;
+}
+#skills .layer , #empty .layer , #contact .layer{
+    background-color: rgba(0,123,255,0.7);
+}
+/* ===========portfolio section=================== */
+#portfolio , #blog {
+    background-color: var(--website-bg-body);
+}
+#portfolio .container .row {
+    row-gap: 1.5rem;
+}
+#portfolio .container .row .card img {
+    transition: 0.9s;
+}
+#portfolio .container .row .card img:hover {
+    transform: scale(1.2);
+}
+#portfolio .container .row .card p i {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+/* =============empty section===================== */
+#empty {
+    background-image: url("../images/OIP.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-attachment: scroll;
+    height: 25vh;
+}
+/* ============Blog Section======================= */
+#blog .container .row .card .card-body a {
+    transform: translate(100%,-100%);
+}
+#blog .container .row .card .card-footer  img{
+    width: 2.5rem;    
+    height: 2.5rem;
+}
+#blog .container .row .card .card-footer a , 
+#blog .container .row .card .card-body h5{
+    transition: 0.3s;
+}
+#blog .container .row .card .card-footer a:hover ,
+ #blog .container .row .card .card-body h5:hover {
+    color: var(--main-color) !important;
+}
+/* =============Contact section */
+#contact {
+    background-image: url("../images/OIP.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-attachment: scroll;
+    height: fit-content;
+}
+#contact * {
+    margin-bottom: 1rem;
+}
+#contact .container .row h2 {
+    position: relative;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+#contact .container .row h2::after {
+    content: "";
+    width: 15%;
+    height: 3.5px;
+    background-color: var(--main-color);
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+#contact .social i {
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    border: 5px solid var(--main-color) ;
+    padding: 0.5rem;
+    transition: 0.3s;
+}
+#contact .social span:hover i {
+    color: var(--base);
+    background-color: var(--main-color);
+    border-color:rgba(133, 187, 245, 0.836);
+}
+#contact .touch-info p i {
+    margin-right: 5px;
+    color: var(--main-color);
+}
